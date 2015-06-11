@@ -1,0 +1,180 @@
+.week-grid, .day-grid {
+  position: relative;
+
+  .time-line {
+    position: absolute;
+    left: 11px;
+    top: 20px;
+    z-index: 1;
+
+    .now-wrapper {
+      position: relative;
+
+      .current-time {
+        position:absolute;
+        top: -8px;
+        left: 0;
+        color: red;
+      }
+
+      .now-time-line {
+        margin-left: 56px;
+        border-bottom: 2px solid red;
+        width: 1067px;
+      }
+    }
+  }
+}
+
+.week, .day {
+  width: 1135px;
+  border: 1px solid #ccc;
+  border-left: 0;
+
+  .hour-header {
+    border-left: 1px solid #ccc;
+    vertical-align: top;
+
+    .hour-text {
+      height: 63px;
+      width: 60px;
+      text-align: right;
+      position: relative;
+      padding-right: 5px;
+      top: 53px;
+    }
+  }
+
+  .day-cell {
+    border-left: 1px solid  #ccc;
+    padding-left: 2px;
+    width: 1078px;
+
+    &.in-week {
+      width: 150px;
+    }
+
+    &.weekend {
+      background-color: #eee;
+    }
+
+    .half-hour {
+      height: 30.5px;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .half-hour:last-child {
+      border: 0;
+    }
+  }
+}
+
+.day-header {
+  text-align: center;
+}
+
+.grid {
+  margin-top: 20px;
+}
+
+.nav {
+  width: 1135px;
+  position: relative;
+  height: 40px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 290px;
+  font-size: 20px;
+  padding: 10px
+}
+
+.interval-selectors {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.buttons {
+
+  .button {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-left: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 5px 10px;
+    background-image: none;
+    border-radius: 0px;
+    color: black;
+
+    &.selected {
+      background-color: #eee;
+    }
+  }
+
+  .button:first-child {
+    border-left: 1px solid #ccc;
+  }
+}
+
+.day-of-week {
+  width: 150px;
+  display: inline-block;
+  text-align: right;
+  font-size: 14px;
+
+  &.weekend {
+    color: #ccc;
+  }
+}
+
+.month {
+  position: relative;
+  width: 1135px;
+  border: solid #ccc;
+  border-width: 1px 0 0 1px;
+
+.month-day {
+  width: 161px;
+  height: 116px;
+  border: solid #ccc;
+  border-width: 0 1px 1px 0;
+
+  .month-day-header {
+    position: relative;
+
+    .date {
+      font-size: 14px;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      color: #ccc ;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      padding: 5px;
+      text-align: center;
+      vertical-align: middle;
+
+      &.current-month {
+        color: black;
+      }
+
+      &.today {
+        background-color: red;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.weekend {
+  background-color: #eee;
+}
+}

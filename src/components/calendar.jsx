@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+require("./../main.scss");
 var React = require('react');
 var moment = require('moment');
 var Header = require('./header');

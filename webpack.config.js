@@ -1,8 +1,8 @@
 module.exports = {
-  entry: './index.jsx',
+  entry: './entry.jsx',
   output: {
-    filename: 'bundle.js',
-    publicPath: 'http://localhost:8090/assets'
+    path: './build',
+    filename: 'bundle.js'
   },
 
   module: {
@@ -10,12 +10,12 @@ module.exports = {
         {
           test: /\.jsx$/,
           loader: 'jsx-loader?insertPragma=React.DOM&harmony'
+        },
+        {
+          test: /\.scss$/,
+          loader: "style!css!sass"
         }
       ]
-  },
-
-  externals: {
-    'react': 'React'
   },
 
   resolve: {
